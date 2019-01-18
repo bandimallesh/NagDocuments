@@ -1,0 +1,33 @@
+Creating Sample Maven Project/Build  MAVEN Project
+Step 1": Install Maven Pluggin
+Step 2: Install Maven  in Aws Instance
+yum install maven
+setup the maven command line path
+ vi /etc/profile.d/maven.sh
+ 
+ export M2_HOME=/opt/bin
+ export PATH=${M2_HOME}/bin:${PATH}
+ 
+  save the file
+Step 3:
+go to Jenkins Dashboard --->Manage Jenkins ...>Gobal Tool Configaratio
+Jdk Installation ----Add Jdk 
+Name - jdk1.8
+JAVA_HOME : /usr/lib/jvm/java-1.8.0
+	Path to Git executable --git
+  MavenInstallation --- 
+ 	Name :maven3.6
+  MAVEN_HOME-- /usr/share/maven
+
+
+Step 4: create a Maven Job
+Dashboard.....>NewItem ---MavenDemo
+select Maven Project click on ok
+select git
+and Repository url -------https://github.com/deepueng40/maven
+In Build Section......> Goals and Options enter ---- "clean package" theb save
+
+
+  
+  
+  
