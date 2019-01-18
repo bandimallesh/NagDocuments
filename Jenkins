@@ -1,0 +1,30 @@
+Jenkins Installation Steps.
+Jenkins can be installed in 3 ways
+1.rpm 2.war 3. yum 
+how to install jenkins using yum command 
+create a new server using AWS Instance
+login to AWS System.
+yum install java 8
+java -version
+Create the Jenkins repository using below commands
+1.sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat/jenkins.repo
+2.sudo rpm --import https://pkg.jenkins.io/redhat/jenkins.io.key
+yum install jenkins
+service jenkins start 
+Open port 8080 and paste server ip adress in the browser 
+Url---->IpAddress:8080
+you will direct to a page that asks to enter the security details
+to get the password go to the Instace and run the command --- cat /var/lib/jenkins/initialAdminPassword
+copy the Password and paste into the Jenkins Login page.
+now you will be directed to the form page where you have to give your credentials like Username,Password,EmailAddress .... then save.
+
+Creating sample job:
+
+ON Jenkins Dashboard select NewItem ---->ItemName as Demo .
+select JOb name is freestyle then click save
+in the Build section run the simple linux commands
+1.echo "Welcome to Jenkins:
+2.calender
+to see the successfull build go to the console output.
+
+
