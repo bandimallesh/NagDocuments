@@ -1,0 +1,22 @@
+pipeline {
+     agent any
+	    stages {
+		    /* "Build" and "Test" Stages Omitte */
+			    stage('Deploy-Dev') {
+				                     steps {
+											              echo 'hello'
+                                    }
+                                   }
+           stage('Deploy-QA') {
+                    steps {
+                            echo 'QA'
+                            input "Does the Stagging Env Look ok ?"
+                          }
+                        }
+            stage('Deploy-Production')  {
+                         steps {
+                                 echo 'Production'
+                               }
+                             }
+                           }
+                      }     
